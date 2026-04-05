@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "Space Mono", monospace;
+  
+  /* Core Palette */
+  --color-chrome-white: #E8EDE4;
+  --color-cipher-green: #0A140A;
+  --color-signal-green: #3D7A3D;
+  --color-silver-mist: #C8D4C0;
+  --color-forest-signal: #1A2E1A;
+  --color-graphite: #2A2A2A;
+
+  /* Surface Hierarchy */
+  --color-surface: #F6FBF2;
+  --color-surface-container-low: #F0F5EC;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-container-high: #E1E9DB;
+  --color-outline-variant: rgba(192, 201, 187, 0.15);
+
+  /* Gradients */
+  --gradient-signal: linear-gradient(135deg, #1A2E1A 0%, #3D7A3D 50%, #C8D4C0 100%);
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-cipher-green);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  font-weight: 400; /* Default to regular as requested */
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom Utilities */
+@utility ghost-border {
+  border: 1px solid var(--color-outline-variant);
+}
+
+@utility glass-overlay {
+  background-color: rgba(246, 251, 242, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+@utility text-gradient-signal {
+  background: var(--gradient-signal);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility bg-gradient-signal {
+  background: var(--gradient-signal);
+}
