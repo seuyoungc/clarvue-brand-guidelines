@@ -1,20 +1,53 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# CLARVUE Brand Guidelines
 
-# Run and deploy your AI Studio app
+An interactive brand guideline site for CLARVUE — built as a presentation layer to define and communicate the visual identity, voice, and design system behind the product.
 
-This contains everything you need to run your app locally.
+Deployed via GitHub Pages. A separate repo from the CLARVUE MVP (`seuyoungc/clarvue-mvp`).
 
-View your app in AI Studio: https://ai.studio/apps/33fe3d9c-7a73-426e-ac06-576e0ad997ff
+---
+
+## Sections
+
+| Section | Content |
+|---|---|
+| **Brand Story** | Product philosophy and origin |
+| **Archetype & Voice** | Ruler × Sage archetype, tone of voice, copy patterns |
+| **The Name** | Etymology and meaning of CLARVUE |
+| **Color System** | Token-based palette, Silver Rule callout |
+| **Typography** | Type scale — Space Grotesk, Manrope, Space Mono |
+| **Three-State Theme** | Day / Dawn / Dusk live theme mockups |
+| **UI Components** | Meal cards, AI chips, feature labels |
+
+---
+
+## Tech Stack
+
+- **React 19** + **Vite**
+- **Tailwind CSS v4**
+- **Framer Motion** (`motion/react`)
+- **Lucide React** (icons)
+- Fonts: Space Grotesk · Manrope · Space Mono
+
+---
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:** Node.js
 
+```bash
+npm install
+npm run dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+App runs at `http://localhost:3000`.
+
+---
+
+## Deploy
+
+Pushes to `main` automatically deploy to GitHub Pages via the workflow in `.github/workflows/deploy.yml`.
+
+```bash
+npm run build   # Build for production
+npm run preview # Preview the production build locally
+```
